@@ -429,6 +429,56 @@ body.p1 {
 	background-size: cover;
 }
 
+.wavy{
+  position: absolute;
+  top: 300px;
+  left: 250px;
+  -webkit-box-reflext: below -12px linear-gradient(transparent, rgba(0,0,0,0.2)); 
+}
+
+.wavy span{
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size: 2em;
+  animation: animate 1s ease-in-out infinite; 
+  animation-delay: calc(0.1s * var(--i));
+}
+ 
+.wavy a{
+  display: block;
+  width: 30px;
+  height: 30px;
+  top: 50px; 
+  left: 600px; 
+  background-color: orange;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  text-indent: 2em;
+  border-radius: 50px;
+  z-index: 1;
+  position: absolute;
+}
+
+
+.wavy a:hover{
+  background-color: #1E1E1E;
+  transition: all .3s ease-in-out
+}
+}
+
+@keyframes animate{
+  0%{
+    transform: translateY(0px);
+  }
+  20%{
+    transform: translateY(-20px);
+  }
+  40%,100%{
+    transform: translateY(0px);
+  }
+}
 /* ------------ */
 
 
